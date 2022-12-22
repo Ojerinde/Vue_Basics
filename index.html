@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="./app.js" defer></script>
+    <title>Day 2</title>
+  </head>
+
+  <body>
+    <section id="app1" class="section__1">
+      <!-- <h1 class="h1">{{counter}}</h1> -->
+      <!-- counterClasses is a computed properties that return a dynamic object -->
+      <!-- <h1 :class="['h1', counterClasses]">{{counter}}</h1> -->
+      <h1 class="h1" :class="counterClasses">{{counter}}</h1>
+      <div class="button__box">
+        <button :class="{button: true}" @click="increment">Increase</button>
+        <button class="button" @click="decrement">Decrease</button>
+        <button class="button" @click="reset">Reset</button>
+      </div>
+      <div class="set__box">
+        <!-- <input type="number" @input="getCounterNumber" /> -->
+        <input type="number" v-model="counterNumber" />
+        <!-- <input type="number" ref="counterRef" /> -->
+        <button class="button" @click="set">Set</button>
+
+        <!-- Computed properties: They are only triggerred whenever the reactive variable inside of them changes. -->
+        <!-- <p>{{ increase }}</p> -->
+      </div>
+      <!-- You can also have a ternary operator inside of the object to change styles dynamically-->
+      <!-- <p :style="{marginTop: '2rem'}"> -->
+      <p :style="{marginTop: hasMargin ? '2rem': '', color: 'blue'}">
+        Google <a :href="googleLink">Link</a>
+      </p>
+    </section>
+    <section id="app2" class="section__2">
+      <!-- <form @submit.prevent="addStudent($event,'Joel')"> -->
+      <form @submit.prevent="addStudent" class="add__student--box">
+        <input type="text" v-model="student" />
+        <button class="btn" type="submit">Add Student</button>
+      </form>
+      <div :style="{margin: '1rem 0'}">
+        <!-- <p v-show="studentLists.length === 0">There are no students</p> -->
+        <p v-if="studentLists.length === 0">There are no students</p>
+        <p v-else-if="studentLists.length === 1">There is a student</p>
+        <p v-else>There are students</p>
+      </div>
+      <ul class="ul" v-if="studentLists.length > 0">
+        <li class="li" v-for="(user, index) of studentLists">
+          ({{index}}) {{user}}
+        </li>
+      </ul>
+      <!-- <ul>
+        <li v-for="(value, key, index) in users">
+          {{index}}: {{key}} ---{{value}}
+        </li>
+      </ul> -->
+    </section>
+  </body>
+</html>

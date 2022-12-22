@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-boxF;
+}
+
+:root {
+  --primary-color: rgb(67, 65, 65);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Chivo Mono", monospace;
+  padding: 3rem 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.section__1 {
+  padding: 2rem;
+  flex-basis: 40%;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.25);
+  color: var(--primary-color);
+  background-color: rgb(216, 213, 213);
+}
+
+.h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.button__box {
+  margin: 2.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 0.1rem solid transparent;
+
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
+.set__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.set__box > input {
+  width: 60%;
+  padding: 0.4rem 0.8rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border: 0.1rem solid transparent;
+  border-radius: 0.4rem;
+}
+
+.set__box > input:focus {
+  outline: none;
+  border: 0.1rem solid var(--primary-color);
+}
+
+.active {
+  border: 0.1rem solid rgb(121, 155, 70);
+}
+
+.section__2 {
+  padding: 2rem;
+  flex-basis: 40%;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.25);
+  background-color: rgb(216, 213, 213);
+}
+.add__student--box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add__student--box > input {
+  width: 55%;
+  padding: 0.2rem 0.8rem;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  border: 0.1rem solid transparent;
+  border-radius: 0.4rem;
+}
+
+.add__student--box > input:focus {
+  outline: none;
+  border: 0.1rem solid var(--primary-color);
+}
+
+.btn {
+  width: fit-content;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 0.1rem solid transparent;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
+.ul {
+  margin-top: 1.5rem;
+  list-style: none;
+}
+.li {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.up {
+  color: rgb(48, 224, 48);
+}
+.down {
+  color: rgb(213, 59, 59);
+}
